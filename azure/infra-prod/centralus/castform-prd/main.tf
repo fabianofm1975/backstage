@@ -41,4 +41,6 @@ module "postgres-azure" {
   enable_instance_high_availability        = local.enable_instance_high_availability
   postgres_instance_high_availability_mode = local.custom.postgres_instance_high_availability_mode
 
+  # Users
+  app_user = local.backstage.app_user
 }

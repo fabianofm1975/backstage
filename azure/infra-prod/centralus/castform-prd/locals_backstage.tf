@@ -16,5 +16,7 @@ locals {
         "project"     = "castform"
         "owner"       = "group:default/infrastructure"
       }
+
+     app_user = "${{ values.postgres_instance_name }}"
   }
 }
