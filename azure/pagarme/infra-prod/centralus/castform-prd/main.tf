@@ -5,7 +5,7 @@ locals {
 }
 
 module "postgres-azure" {
-  source = "git@github.com:stone-payments/data-persistence-terraform-modules.git/modules/azure-postgresql-flexible-backstage"
+  source = "git@github.com:stone-payments/infra-cloud-psql.git/modules/azure-postgresql-flexible-backstage"
 
   # Server Instance Section
   env                          = local.backstage.env
