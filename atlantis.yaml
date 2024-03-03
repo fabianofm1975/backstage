@@ -3,3 +3,11 @@ automerge: false
 projects:
 
 
+- name: teste
+  dir: ./aws/teste/global/s3/
+  workspace: sdx
+  workflow: aws-payments-pagarme-sdx
+  autoplan:
+    enabled: false
+    when_modified: ["*.tf"]
+  apply_requirements: [mergeable, approved]
