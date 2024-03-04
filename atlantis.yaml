@@ -11,3 +11,12 @@ projects:
     enabled: false
     when_modified: ["*.tf"]
   apply_requirements: [mergeable, approved]
+
+- name: aws_alertas-incidentes-stg_postgresql_castform_stg
+  dir: ./aws/alertas-incidentes-stg//postgresql/castform-stg"
+  workspace: stg
+  workflow: aws-payments-pagarme-sdx
+  autoplan:
+    enabled: false
+    when_modified: ["*.tf"]
+  apply_requirements: [mergeable]
