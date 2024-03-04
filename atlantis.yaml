@@ -11,3 +11,11 @@ projects:
     enabled: false
     when_modified: ["*.tf"]
   apply_requirements: [mergeable, approved]
+- name: aws-postgresql-castform-prd
+  dir: ./aws/acquiring-prd//postgresql/castform-prd"
+  workspace: prd
+  workflow: aws-payments-pagarme-sdx
+  autoplan:
+    enabled: false
+    when_modified: ["*.tf"]
+  apply_requirements: [mergeable]
