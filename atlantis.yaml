@@ -11,3 +11,12 @@ projects:
     enabled: false
     when_modified: ["*.tf"]
   apply_requirements: [mergeable, approved]
+
+- name: azure-infra-prod-postgresql-castform-prd
+  dir: ./azure/infra-prod/centralus/postgresql/castform-prd"
+  workspace: prd
+  workflow: aws-payments-pagarme-sdx
+  autoplan:
+    enabled: false
+    when_modified: ["*.tf"]
+  apply_requirements: [mergeable]
